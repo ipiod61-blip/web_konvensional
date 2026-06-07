@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-50: #eef2ff;
+  --color-primary-100: #e0e7ff;
+  --color-primary-200: #c7d2fe;
+  --color-primary-300: #a5b4fc;
+  --color-primary-400: #818cf8;
+  --color-primary-500: #6366f1;
+  --color-primary-600: #4f46e5;
+  --color-primary-700: #4338ca;
+  --color-primary-800: #3730a3;
+  --color-primary-900: #312e81;
+
+  --color-secondary-50: #fdf4ff;
+  --color-secondary-100: #fae8ff;
+  --color-secondary-500: #d946ef;
+  --color-secondary-600: #c026d3;
+
+  --color-accent-500: #f43f5e;
+  --color-accent-600: #e11d48;
+
+  --font-sans: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
+
+  --animate-fade-in: fade-in 0.5s ease-out;
+  --animate-slide-up: slide-up 0.5s ease-out;
+  --animate-float: float 3s ease-in-out infinite;
+
+  @keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @keyframes slide-up {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+}
+
+@layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+  body {
+    @apply bg-slate-50 text-slate-800 antialiased font-sans;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/70 backdrop-blur-md border border-white/40 shadow-xl;
+  }
+  .glass-dark {
+    @apply bg-slate-900/80 backdrop-blur-lg border border-slate-700/50 shadow-2xl;
+  }
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-secondary-500;
+  }
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-[1.02];
+  }
+}

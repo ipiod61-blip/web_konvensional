@@ -1,0 +1,126 @@
+"Bertindaklah sebagai Senior System Analyst dan Technical Writer. 
+Tugas Anda adalah menyusun laporan komprehensif mengenai perancangan dan pembuatan website manajemen stok dan POS berdasarkan struktur bab di bawah ini. 
+Anda harus mengelaborasi setiap poin secara akademis, teknis, dan mendalam dengan mengacu pada detail arsitektur frontend dan backend yang ditentukan."
+
+Dengan mengedepankan keabsahan data ataupun literatur yang terbukti keilmiahannya, bukan berdasarkan opini semata.
+Maka dari itu, dalam penyusunan dokumen yang memiliki keterkaitan dengan data ataupun literatur wajib menyantumkan sumbernya, entah itu dari buku ataupun
+jurnal ilmiah yang relevan dan terbukti keilmiahannya.
+
+Jangan terlalu terpaku pada format yang saya berikan dibawah kamu bisa lakukan beberapa imporvisasi yang sesuai dengan folder dan isi dari folder yang saya miliki.
+
+JUDUL LAPORAN
+RANCANGAN SISTEM INFORMASI MANAJEMEN STOK DAN POINT OF SALE BERBASIS WEB MENGGUNAKAN METODE SDLC PROTOTYPE PADA TOKO BANGUNAN BAKTI JAYA
+
+BAB 1: PENDAHULUAN
+1.1. Latar Belakang
+
+Jabarkan transformasi digital pada bisnis ritel, khususnya toko bangunan yang memiliki kompleksitas variasi barang sesuai dengan database yang dimiliki dalam proyek ini. 
+Jelaskan masalah operasional pada Toko Bangunan Bakti Jaya jika masih menggunakan pencatatan manual atau sistem yang belum terintegrasi (pencatatan stok, sulitnya pelacakan aktivitas pegawai/pemasok).
+Tuliskan mengapa kombinasi Manajemen Stok dan POS berbasis web menjadi solusi krusial.
+
+1.2. Rumusan Masalah
+
+Rumuskan masalah secara spesifik:
+- Bagaimana merancang sistem informasi manajemen stok dan POS yang terintegrasi berbasis web?
+- Bagaimana menerapkan metode SDLC Prototype agar sistem yang dibangun sesuai dengan kebutuhan riil Toko Bangunan Bakti Jaya?
+- Bagaimana mengelola sinkronisasi data barang dan pencatatan log aktivitas secara akurat?
+
+1.3. Tujuan
+
+- Detailkan tujuan penelitian, yaitu membangun sistem informasi berbasis web yang mampu mengotomatisasi transaksi penjualan (POS)
+- Mengelola inventaris secara real-time
+- Menyediakan pelacakan riwayat aktivitas yang transparan.
+
+1.4. Manfaat
+
+Contohnya:
+- Bagi Perusahaan: Meningkatkan efisiensi operasional, meminimalkan human error, mempercepat transaksi kasir, dan mengamankan aset data barang. 
+- Bagi Penulis: Mengimplementasikan keilmuan rekayasa perangkat lunak (arsitektur frontend/backend) dalam menyelesaikan masalah nyata di industri.
+
+1.5. Batasan Masalah
+
+Batasan ruang lingkup sistem:
+- Berbasis web
+- Berfokus pada fitur POS (kasir) dan manajemen stok gudang
+- Memiliki sistem hak akses (Role-Based Access Control)
+- Memiliki aturan khusus untuk pengodean barang dan penerimaan barang parsial.
+- Tidak membahas sistem akuntansi internal yang kompleks atau manajemen penggajian karyawan.
+
+1.6. Metode Penelitian
+
+- Jelaskan metode pengumpulan data (Observasi langsung di Toko Bakti Jaya dan Wawancara dengan pemilik/karyawan)
+- Jelaskan metode pengembangan sistem menggunakan SDLC Prototype secara singkat pada tahap ini, karena akan dibahasa secara lebih mendalam di BAB 3.
+
+BAB 2: LANDASAN TEORI
+2.1. Tinjauan Pustaka
+
+Jelaskan teori-teori dasar secara ilmiah mengenai: 
+- Sistem Informasi
+- Manajemen Stok/Inventaris
+- Point of Sale (POS) 
+- Metode SDLC Prototype 
+- Konsep arsitektur aplikasi web modern (pemisahan Frontend sebagai Client-Side Tier dan Backend sebagai Server-Side API Tier).
+
+2.2. Peralatan Pendukung
+
+Uraikan perkakas dan teknologi yang digunakan dalam pembuatan dokumen dan aplikasi, seperti: 
+- Unified Modeling Language (UML) sebagai perancangan visual (Use Case, Activity, Sequence Diagram)
+- Konsep Basis Data Relasional (LRS dan ERD)
+- Teknologi spesifik pada stack pengembangan (misalnya framework komponen di sisi frontend dan manajemen state, serta penanganan logic dan database connection di sisi backend).
+
+BAB 3: PELAKSANAAN DAN METODE PENGERJAAN
+3.1. Metodologi Pengembangan
+
+Detailkan langkah-langkah implementasi metode SDLC Prototype pada proyek ini:
+- Pengumpulan Kebutuhan (Requirements Gathering)
+- Desain Cepat (Quick Design)
+- Pembangunan Prototipe (Build Prototype)
+- Evaluasi Prototipe oleh Pengguna
+- Perbaikan/Penghalusan Prototipe (Refining Prototype)
+- Produksi Penuh (Engineered Product)
+
+3.2. Analisis Kebutuhan
+
+Deskripsikan Kebutuhan Fungsional dengan detail arsitektur berikut:
+- Role-Based Access Control (RBAC): Pembagian hak akses yang jelas antara Manajemen dan Kasir.
+- Manajemen Data (CRUD): Hak pengelolaan penuh data barang, kategori, pemasok, dan transaksi.
+- Log Aktivitas (Activity Logs): Pencatatan riwayat berkala untuk memonitor tindakan yang dilakukan oleh manajemen dan kasir guna menjaga validitas data gudang.
+- Kebutuhan Non-Fungsional: Keamanan data, performa respons API backend, dan antarmuka frontend yang responsif serta mudah digunakan oleh kasir.
+
+3.3. Desain Sistem
+
+Tuliskan spesifikasi logika sistem:
+- Logika Pengodean Barang (Data Barang): Sistem wajib menerapkan format kode otomatis hasil penggabungan string (konkatenasi) dengan aturan: [3 Huruf Pertama Nama Barang][Nama Kategori jika ada]BRG[Nomor Urut/Sequence].
+- Skema Relasi Basis Data: Jelaskan struktur tabel penampung data barang, detail transaksi, data user (RBAC), dan tabel log aktivitas.
+
+BAB 4: IMPLEMENTASI DAN PENGUJIAN
+4.1. Implementasi
+
+Uraikan bagaimana rancangan diterjemahkan ke dalam kode program:
+- Sisi Frontend: 
+  > Struktur direktori komponen (manajemen tampilan POS, keranjang belanja kasir, menu input inventaris, tombol riwayat aktivitas, dan integrasi dengan API backend).
+- Sisi Backend: 
+  > Implementasi logika bisnis utama
+  > Penanganan autentikasi user
+  > Serta aturan pemrosesan barang masuk (Inbound/Incoming Goods). 
+  > Penting: Elaborasikan logika penanganan barang masuk yang fleksibel, di mana sistem harus mengizinkan input bertahap/parsial jika jumlah barang yang diterima secara fisik lebih kecil dari jumlah permintaan gudang (Demand) semula, tanpa merusak konsistensi data stok akhir.
+
+4.2. Pengujian
+
+Gunakan metode Black-Box Testing.
+- Buat skenario pengujian fungsionalitas untuk menguji kelayakan menu CRUD
+- Mekanisme kode otomatis [3Huruf][Kategori]BRG[No]
+- Alur transaksi POS di kasir
+- Ketahanan sistem saat menangani input barang masuk yang parsial/bertahap
+- Serta pembatasan hak akses (RBAC).
+
+BAB 5: PENUTUP
+5.1. Kesimpulan
+
+Tarik kesimpulan bahwa penerapan metode SDLC Prototype berhasil menyelaraskan ekspektasi Toko Bangunan Bakti Jaya dengan sistem manajemen stok & POS yang dibangun.
+Sistem mampu menangani pengodean terstruktur, pencatatan log aktivitas, serta fleksibilitas input barang masuk secara akurat.
+
+5.2. Saran
+
+Berikan rekomendasi untuk pengembangan ke depan, seperti integrasi dengan payment gateway untuk POS, enkripsi log aktivitas tingkat lanjut,
+penggunaan Docker untuk replikasi infrastruktur, atau pengembangan aplikasi ke ranah mobile interface untuk mempermudah pemindaian barcode barang di gudang fisik.
